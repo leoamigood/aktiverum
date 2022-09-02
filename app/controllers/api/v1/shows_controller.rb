@@ -2,7 +2,7 @@
 
 module Api
   module V1
-    class ShowsController < ApplicationController
+    class ShowsController < BaseController
       def index
         render json: Show.all
       end

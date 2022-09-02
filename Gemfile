@@ -49,6 +49,8 @@ gem 'bootsnap', require: false
 
 gem 'activeadmin'
 gem 'devise'
+gem 'devise-jwt'
+gem 'devise-token_authenticatable'
 gem 'pg'
 gem 'sass-rails'
 
