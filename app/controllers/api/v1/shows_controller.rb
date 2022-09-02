@@ -8,7 +8,9 @@ module Api
       end
 
       def show
-        the_show = Show.find_by!(identifier: params[:identifier])
+        the_show = Show.find_by(identifier: params[:identifier])
+        return head :not_found unless the_show
+
         render json: the_show
       end
     end
