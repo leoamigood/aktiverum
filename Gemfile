@@ -48,6 +48,7 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'activeadmin'
+gem 'aws-sdk-s3', require: false
 gem 'devise'
 gem 'devise-jwt'
 gem 'devise-token_authenticatable'

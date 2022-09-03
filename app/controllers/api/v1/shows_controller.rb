@@ -3,6 +3,8 @@
 module Api
   module V1
     class ShowsController < BaseController
+      include ActiveStorage::SetCurrent
+
       def index
         render json: Show.all
       end

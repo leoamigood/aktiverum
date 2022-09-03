@@ -8,7 +8,8 @@ class Show < ApplicationRecord
   def as_json(_ = {})
     {
       identifier:,
-      name:
+      name:,
+      episodes:   episodes.as_json
     }
   end
 end

@@ -12,13 +12,13 @@ describe Api::V1::ShowsController, type: :controller do
   end
 
   describe 'GET #index' do
-    let!(:show) { create(:show) }
+    let!(:show) { create(:show, name: 'Two and a half men', episodes: [build(:episode, name: 'Pilot')]) }
 
     it 'succeeds using JWT' do
       get :index
 
       expect(response).to have_http_status(:ok)
-      expect(response.body).to include_json([{ identifier: show.identifier }])
+      expect(response.body).to include_json([{ identifier: show.identifier, episodes: [{ name: 'Pilot' }] }])
     end
 
     it 'unauthorized' do
