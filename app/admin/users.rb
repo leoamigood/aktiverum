@@ -3,7 +3,9 @@
 ActiveAdmin.register User do
   menu priority: 2
 
-  actions :index, :show
+  actions :new, :create, :index, :show, :edit, :update, :destroy
+
+  permit_params :username, :email, :first_name, :last_name, :authentication_token
 
   index do
     selectable_column
