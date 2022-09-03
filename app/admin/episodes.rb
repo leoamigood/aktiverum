@@ -3,7 +3,7 @@
 ActiveAdmin.register Episode do
   belongs_to :show, optional: false
 
-  actions :new, :create, :index, :show, :edit, :update
+  actions :all
 
   permit_params :name, :season
 

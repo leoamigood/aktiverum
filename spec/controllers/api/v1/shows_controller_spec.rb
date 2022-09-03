@@ -24,7 +24,7 @@ describe Api::V1::ShowsController, type: :controller do
     it 'unauthorized' do
       request.headers['Authorization'] = 'Bearer bogus_token'
 
-      get :index
+      get :index, format: 'json'
 
       expect(response).to have_http_status(:unauthorized)
     end

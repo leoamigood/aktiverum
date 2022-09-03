@@ -2,7 +2,7 @@
 
 ActiveAdmin.register Show do
   menu priority: 1
-  actions :new, :create, :index, :show, :edit, :update
+  actions :all
 
   permit_params :name
 

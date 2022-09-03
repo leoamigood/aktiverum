@@ -3,6 +3,8 @@
 ActiveAdmin.register AdminUser do
   permit_params :email, :password, :password_confirmation
 
+  actions :all
+
   index do
     selectable_column
     id_column

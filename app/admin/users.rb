@@ -3,7 +3,7 @@
 ActiveAdmin.register User do
   menu priority: 2
 
-  actions :new, :create, :index, :show, :edit, :update, :destroy
+  actions :all
 
   permit_params :username, :email, :first_name, :last_name, :authentication_token
 
@@ -28,6 +28,19 @@ ActiveAdmin.register User do
       row :updated_at
       row :created_at
     end
+  end
+
+  form do |f|
+    f.semantic_errors
+
+    f.inputs do
+      f.input :username
+      f.input :first_name
+      f.input :last_name
+      f.input :email
+      f.input :authentication_token
+    end
+    f.actions
   end
 
   filter :email
