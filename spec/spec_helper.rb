@@ -23,6 +23,10 @@ SimpleCov.start 'rails'
 RSpec.configure do |config|
   require 'factory_bot_rails'
 
+  config.before(:all) do
+    ActiveStorage::Current.url_options = { protocol: 'http', host: 'localhost', port: '3000' }
+  end
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

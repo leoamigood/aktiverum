@@ -7,12 +7,12 @@ class Episode < ApplicationRecord
 
   has_one_attached :video
 
-  def as_json(_ = {})
+  def as_json(options = { skip_video: false })
     {
       identifier:,
       name:,
       season:,
-      video:      video.url
-    }
+      video_url:  options[:skip_video] ? nil : video.url
+    }.compact
   end
 end

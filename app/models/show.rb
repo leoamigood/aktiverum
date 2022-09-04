@@ -5,11 +5,11 @@ class Show < ApplicationRecord
 
   has_many :episodes, dependent: :destroy
 
-  def as_json(_ = {})
+  def as_json(options = { skip_video: true })
     {
       identifier:,
       name:,
-      episodes:   episodes.as_json
+      episodes:   episodes.map { |e| e.as_json(options) }
     }
   end
 end
