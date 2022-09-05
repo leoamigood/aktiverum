@@ -18,9 +18,9 @@ ActiveAdmin.register Episode do
     attributes_table do
       row :name
       row :season
-      row :videos do
+      row :video do
         div do
-          video_tag url_for(resource.video)
+          video_tag url_for(resource.video) if resource&.video.present?
         end
       end
       row :updated_at
