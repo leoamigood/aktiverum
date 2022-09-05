@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :shows, param: :identifier, only: %i[index show]
+      resources :episodes, param: :identifier, only: :show
     end
   end
 end
