@@ -4,6 +4,10 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
+remote: &remote
+  <<: *default
+  url: <%= ENV.fetch('DATABASE_URL') { '' } %>
+
 development:
   <<: *default
   database: squamae_dev
@@ -13,5 +17,4 @@ test:
   database: squamae_test
 
 production:
-  <<: *default
-  database: squamae
+  <<: *remote

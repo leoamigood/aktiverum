@@ -55,15 +55,18 @@ gem 'devise-token_authenticatable'
 gem 'pg'
 gem 'sass-rails'
 
-gem 'rubocop-rails', require: false
+gem 'bundler-audit', require: false
 gem 'rubocop-performance', require: false
+gem 'rubocop-rails', require: false
 gem 'rubocop-rspec', require: false
+# gem 'panolint', require: false
 
 group :development, :test do
-  gem 'factory_bot_rails'
-  gem 'ffaker'
+  gem 'brakeman'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
+  gem 'factory_bot_rails'
+  gem 'ffaker'
   gem 'rspec-json_expectations'
   gem 'rspec-rails', '~> 5.1'
   gem 'spring'

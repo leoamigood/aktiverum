@@ -1,3 +1,13 @@
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - 'bin/**/*'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+    - 'db/schema.rb'
+    - 'vendor/bundle/**/*'
+
 require:
   - rubocop-performance
   - rubocop-rails
@@ -96,12 +106,3 @@ RSpec/MultipleMemoizedHelpers:
   Max: 7
 RSpec/ContextWording:
   Enabled: false
-
-AllCops:
-  NewCops: enable
-  SuggestExtensions: false
-  Exclude:
-    - 'bin/**/*'
-    - 'node_modules/**/*'
-    - 'tmp/**/*'
-    - 'db/schema.rb'

@@ -33,6 +33,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/config/credentials/test.key
 /config/credentials/production.key
 
 # IDE
@@ -40,4 +41,3 @@
 
 # Test coverage results
 coverage/
-
