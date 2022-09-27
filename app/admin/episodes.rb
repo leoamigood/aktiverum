@@ -34,7 +34,7 @@ ActiveAdmin.register Episode do
     f.inputs do
       f.input :name
       f.input :season
-      f.input :video, as: :file, input_html: { multiple: false }
+      f.input :video, as: :file, input_html: {multiple: false}
     end
     f.actions
   end

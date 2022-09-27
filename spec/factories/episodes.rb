@@ -6,6 +6,6 @@ FactoryBot.define do
     name { FFaker::Lorem.phrase }
     season { "S#{FFaker::Number.number(digits: 1)}" }
 
-    video { Rack::Test::UploadedFile.new('Gemfile', 'video/mp4') }
+    video { Rack::Test::UploadedFile.new("Gemfile", "video/mp4") }
   end
 end

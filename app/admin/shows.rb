@@ -29,9 +29,9 @@ ActiveAdmin.register Show do
     f.actions
   end
 
-  sidebar 'Shows Details', only: %i[show edit] do
+  sidebar "Shows Details", only: %i[show edit] do
     ul do
-      li link_to 'Episodes', admin_show_episodes_path(resource)
+      li link_to "Episodes", admin_show_episodes_path(resource)
     end
   end
 
