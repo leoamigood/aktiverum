@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require "rails_helper"
 
 describe Episode, type: :model do
   let(:episode) { build(:episode) }
 
-  it 'as_json' do
+  it "as_json" do
     result = episode.as_json
 
     expect(result[:identifier]).to eq(episode.identifier)

@@ -16,15 +16,15 @@
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require 'simplecov'
+require "simplecov"
 
-SimpleCov.start 'rails'
+SimpleCov.start "rails"
 
 RSpec.configure do |config|
-  require 'factory_bot_rails'
+  require "factory_bot_rails"
 
   config.before(:all) do
-    ActiveStorage::Current.url_options = { protocol: 'http', host: 'localhost', port: '3000' }
+    ActiveStorage::Current.url_options = {protocol: "http", host: "localhost", port: "3000"}
   end
 
   # rspec-expectations config goes here. You can use an alternate
